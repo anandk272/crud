@@ -1,0 +1,8 @@
+<form action="" (ngSubmit)="handleSubmit(myForm)" #myForm="ngForm">
+<input type="text" placeholder="name" name="name" ngModel>
+<input type="text" placeholder="description" name="description" ngModel>
+<input type="email" email required ngModel name="email" #email='ngModel'>
+<p class='text-red-700' *ngIf="email.untouched && email.invalid">invalid mail id</p>
+<button type="submit" [disabled]="!myForm.valid">submit</button>
+
+</form>

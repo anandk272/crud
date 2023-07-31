@@ -1,0 +1,41 @@
+<div mat-dialog-title>
+    <h3>Employee form</h3>
+</div>
+<div mat-dialog-content>
+    <div class="row">
+        <mat-form-field class="m-3" >
+            <mat-label appearance="outline">First Name</mat-label>
+            <input matInput type="text" placeholder="nvsdnvkls">
+    
+        </mat-form-field>
+
+        <mat-form-field >
+            <mat-label appearance="outline">Last Name</mat-label>
+            <input matInput type="text" placeholder="nvsdnvkls">
+    
+        </mat-form-field>
+
+    </div>
+    <div class="row">
+        <mat-form-field class="m-3" >
+            <mat-label appearance="outline">Email</mat-label>
+            <input matInput type="email" placeholder="nvsdnvkls">
+    
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+    </div>
+    
+
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button>Cancel</button>
+    <button mat-raised-button color="primary">Add</button>
+</div>

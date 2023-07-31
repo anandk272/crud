@@ -1,0 +1,9 @@
+<p>http works!</p>
+<div>
+    <p *ngFor="let emp of employee">{{emp.name | uppercase}} {{emp.salary | usdInr:70}}<a (click)="editEmp(emp)">edit</a> <a (click)="delEmp(emp.id)">delete</a></p>
+</div>
+
+<input type="text" placeholder="name" [(ngModel)]="name">
+<input type="number" placeholder="salary" [(ngModel)]="salary">
+<input type="number" placeholder="experience" [(ngModel)]="experience">
+<button (click)="handleSubmit()">submit</button>
